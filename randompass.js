@@ -29,7 +29,7 @@ function randomWord(len){
 
   return pass;
 }
-console.log(randomWord(68))
+console.log(randomWord(6))
 
 
 
@@ -48,7 +48,7 @@ function randomPass(len){
 
   return pass;
 }
-}
+
 
 
 
@@ -59,13 +59,22 @@ function randomPass(len){
 
 //returns a string of pretty much any ASCII characters, letters, numbers, and specials
 function randomSpecialPass(len){
+ 
+    let pass = "";
+  
+    for(let i = 0; i < len; i++){
+  
+      let randomNumber = Math.floor(10*Math.random())+33;
+      pass += String.fromCharCode(randomNumber);
+    }
+  
+   return pass;
+  }
 
 
-}
 
 
-
-
+console.log(randomSpecialPass(5));
 
 
 //same as the code above, just pass in a length of 20.
