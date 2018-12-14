@@ -29,7 +29,7 @@ function randomWord(len){
 
   return pass;
 }
-console.log(randomWord(6))
+
 
 
 
@@ -65,6 +65,7 @@ function randomSpecialPass(len){
     for(let i = 0; i < len; i++){
   
       let randomNumber = Math.floor(10*Math.random())+33;
+     
       pass += String.fromCharCode(randomNumber);
     }
   
@@ -74,11 +75,28 @@ function randomSpecialPass(len){
 
 
 
-console.log(randomSpecialPass(5));
+
 
 
 //same as the code above, just pass in a length of 20.
-function randomSuperPass(){
+function randomSuperPass(len){
 
+    let pass = "";
+  
+    for(let i = 0; i < len; i++){
+  
+      let randomNumber = Math.floor(10*Math.random())+33;
+     
+      pass += String.fromCharCode(randomNumber);
+    }
+  
+   return pass;
+  }
 
-}
+console.log(randomSuperPass(20))
+
+console.log(randomWord(6))
+
+console.log(randomPass(7))
+
+console.log(randomSpecialPass(5))
